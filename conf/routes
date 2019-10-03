@@ -1,0 +1,26 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET        /                             controllers.Application.index()
+# Example page
+GET        /example                      controllers.Example.example()
+#greeting
+GET        /greeting                     controllers.Example.greeting(name:String)
+#redirectMe
+GET        /redirectMe                   controllers.Example.redirectMe()
+#redirectMe
+GET        /redirectMeAgain              controllers.Example.redirectMe()
+#redirectToHere
+GET        /redirectToHere               controllers.Example.redirectToHere()
+#notYetImplemented
+GET        /notYetImplemented            controllers.Example.notYetImplemented()
+#cookieExample
+GET        /cookieExample                controllers.Example.cookieExample()
+#sessionStorageExample
+GET        /sessionStorageExample        controllers.Example.sessionStorageExample
+
+# Map static resources from the /public folder to the /assets URL path
+GET        /assets/*file                 controllers.Assets.at(path="/public", file)
+
